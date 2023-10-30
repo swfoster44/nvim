@@ -55,5 +55,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    use('motosir/skel-nvim')
+
+    use('/home/sfoster/dev/lua_dev/templ-nvim')
 end)

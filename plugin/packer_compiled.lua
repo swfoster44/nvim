@@ -165,15 +165,15 @@ _G.packer_plugins = {
     path = "/home/sfoster/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["skel-nvim"] = {
-    loaded = true,
-    path = "/home/sfoster/.local/share/nvim/site/pack/packer/start/skel-nvim",
-    url = "https://github.com/motosir/skel-nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/sfoster/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["templ-nvim"] = {
+    loaded = true,
+    path = "/home/sfoster/.local/share/nvim/site/pack/packer/start/templ-nvim",
+    url = "/home/sfoster/dev/lua_dev/templ-nvim"
   },
   undotree = {
     loaded = true,

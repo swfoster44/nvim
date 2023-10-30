@@ -1,0 +1,28 @@
+CC:=gcc
+CFLAGS:=-g -Wall -Wpedantic -Werror
+
+PWD:=$(shell pwd)
+SRC:=$(PWD)/src
+OBJ:=$(PWD)/obj
+BIN:=$(PWD)
+TEST:=$(PWD)/tests
+
+
+SRCS:=$(wildcard $(SRC)/*.c)
+OBJS:=$(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SRCS))
+BINS:=$(BIN)/main
+
+
+all: $(BINS)
+
+
+$(OBJ)/%.o: $(SRC)/%.c 
+	$(CC) $(CFLAGS) -c $< -o $@
+
+
+$(BIN)/main: $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) $(TEST_OBJS) -o $@
+
+
+clean:
+	$(RM) -r $(OBJ)/* $(BINS)
